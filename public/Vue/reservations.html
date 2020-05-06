@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="cont1 container-fluid">
+
+        <nav class="cont1-1 navbar navbar-expand-md navbar-dark">
+            <!-- Brand -->
+            <a class="navbar-brand" href="#"><img class="logo" src="images/logo.png"></a>
+          
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <!-- Navbar links -->
+            <div class="link collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav">
+                <li class="nav-item l1">
+                    <button class="btn1"><a class="nav-link " href="index.html"> Home </a> </button>
+                   </a>
+                </li>
+                <li class="nav-item l1">
+                  <a class="nav-link" href="reservations.html">Reservations</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="row cont2">
+            <div class="col-md-12">
+                <h1> LISTE DES RESERVATIONS</h1>
+            </div>
+        </div>  
+          </div>
+          <div class="row">
+              <div class="col-md-11">
+                  <input type="text" class="form-control serachh" placeholder=" Chercher des reservations">
+              </div>
+          </div>
+          <div class="container cont8">
+          <div class="table-responsive">          
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Nom</th>
+                  <th>CIN</th>
+                  <th>Date debut</th>
+                  <th>Date Fin</th>
+                  <th>Chambres</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="listereservations">
+    
+              </tbody>
+            </table>
+            </div>
+          </div>
+        </div>
+          
+
+<!-- Delete PopUp-->
+<div class="modal fade" id="DeletePopUp" tabindex="-1" role="dialog" aria-labelledby="DeletePopUpTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Supprimer reservation</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="text-align: center;">
+                <h1>Etes-vous sûre ?</h1><br />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn anbtn" data-dismiss="modal">Annuler</button>
+                <button type="button" id="delbtn" data-dismiss="modal" class="btn">Supprimer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Update PopUp-->
+<div class="modal fade" id="UpdatePopUp" tabindex="-1" role="dialog" aria-labelledby="UpdatePopUpTitle"
+    aria-hidden="true">
+
+    <!-- Add .modal-dialog-centered to .modal-dialog to vertically center the modal -->
+    <div class="modal-dialog modal-dialog-centered" role="document">
+
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Update Task</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="moddiv modal-body">
+                <div class="txt">
+                    <input type="text" id="nomupdate" class="fadeIn second" name="nomupdate" class="form controller" placeholder="nouveau nom"/>
+                    <input type="text" id="cinupdate" class="fadeIn third" name="cinupdate" class="form controller" placeholder="nouveau cin" />
+                    <input type="date" id="datedebutupdate" class="fadeIn second" name="datedebutupdate"class="form controller" placeholder="nouvelle date de debut" />
+                    <input type="date" id="datefinupdate" class="fadeIn second" name="datefinupdate" class="form controller" placeholder="nouvelle date de fin" />
+                    <input type="number" id="chambresupdate" class="fadeIn second" name="chambresupdate" class="form controller" placeholder="nouveau nombre de chambres" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn anbtn" data-dismiss="modal">Annuler</button>
+                <button type="button" id="modbtn" data-dismiss="modal" class="btn">Enregistrer les changements </button>
+            </div>
+        </div>
+    </div>
+</div>
+ <!-- Footer -->
+<footer class="page-footer font-small cyan darken-3">
+
+    <!-- Footer Elements -->
+    <div class="container-fluid cont5 ">
+  
+      <!-- Grid row-->
+      <div class="row">
+  
+        <!-- Grid column -->
+        <div class="col-md-12 py-5">
+          <div class="mb-5 flex-center">
+          <div class="row cont7">
+            
+            <img src="images/insta.png">
+            <img src="images/twitter.png">
+            <img src="images/insta.png">
+            <img src="images/lin.png">
+            <img src="images/gplus.png">
+        </div>
+          </div>
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row-->
+  
+    </div>
+    <!-- Footer Elements -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright cont6 text-center py-3">© 2020 Copyright
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+
+  <script src="../js/Reservation.js"></script>
+  <script src="../js/ModifierReservation.js"></script>
+  <script src="../js/SupprimerReservation.js"></script>
+  <script src="../js/AjouterReservation.js"></script>
+   </body>
+</html>

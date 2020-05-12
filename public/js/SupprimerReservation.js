@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     
-        $("#delbtn").click(function(){  // Recuperation des valeurs
+        $("#delbtn").click(function(){  
          
             console.log(localStorage.getItem("id"));
                  $.ajax({

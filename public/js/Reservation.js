@@ -8,7 +8,7 @@ $(document).ready(function () {
             var datefin = $("#datefin").val();
             var chambres = $("#chambres").val();
 
-            if (nom != "" && cin!= "" && datedebut!= "" && datedebut!= "" && datefin!="" && chambres!= "") {  
+            if (nom != "" && cin!= "" && datedebut!= "" && datefin!="" && chambres!= "") {  
                 $.ajax({
                     url: '/AjouterReservation',
                     type: 'post',
@@ -22,6 +22,7 @@ $(document).ready(function () {
                             $("#datedebut").val('');
                             $("#datefin").val('');
                             $("#chambres").val('');
+                            alert("Ajout valide");
                         }
                     }
 

@@ -11,6 +11,3 @@ npm start
 # Code is Running on
 http://localhost:3000
 
-# Username and Password
-username: Mariem Elhadki.
-password:Admin2020
